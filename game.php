@@ -29,17 +29,18 @@ if(! isset($_GET["who"])){
   <?php
   $CPUChoice = array('Rock', 'Paper', 'Scissors');
                        shuffle($CPUChoice);
-                       //echo "CPU Select". $CPUChoice[0];exit;
-                         $comp = $CPUChoice[0];
+                      $comp = $CPUChoice[0];
   $human= isset($_POST['human'])?$_POST['human']:"select";
 
 
 if($human=="select"){
   print "Please select a strategy and press Play.";}
-elseif($human=="Rock" || $human== "Paper" || $human=="Scissors"){
+
+  elseif($human=="Rock" || $human== "Paper" || $human=="Scissors"){
   $result=check($human,$comp);
 print "Your Play=$human Computer Play=$comp Result=$result";}
-elseif($human=="test"){
+
+  elseif($human=="test"){
 for($c=0;$c<3;$c++) {
 
 for($h=0;$h<3;$h++) {
